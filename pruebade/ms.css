@@ -1,0 +1,84 @@
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  border-bottom: 3px solid red;
+  padding: 15px;
+}
+.logo { height: 60px; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  border-right: 2px solid crimson;
+  padding-right: 10px;
+}
+
+section.fondo {
+  background: url(https://imgs.search.brave.com/vC7ZLxcJFThbt99tGrvYtpXnyAZH4DzqPOmLVSb97dc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMzLmFscGhhY29k/ZXJzLmNvbS83NzMv/dGh1bWItMTkyMC03/NzM5OS5qcGc) center/cover no-repeat;
+  height: 150vh;
+  position: relative;
+  overflow: hidden;
+}
+
+section.fondo::before {
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,0.3);
+}
+.texto {
+  position:absolute; top:60%; left:50%;
+  transform:translate(-50%,-50%);
+  font-size:40px; font-weight:bold;
+  text-shadow:2px 2px 5px #7e0101;
+  color: black;
+  
+}
+.cta {
+  position:absolute; top:70%; left:50%;
+  transform:translateX(-50%);
+  background: rgb(92, 0, 0); color:rgb(0, 0, 0);
+  padding:10px 20px; border-radius:5px;
+  text-decoration:none; font-weight:bold;
+}
+
+
+.catas { text-align:center; padding:40px; }
+.catas h2 { color: rgb(173, 0, 0); }
+.catas table { margin:auto; border-collapse:collapse; width:80%; }
+.catas th, .catas td { border:2px solid rgb(117, 25, 13); padding:10px; }
+.catas th { background:#333; color:rgb(0, 0, 0); }
+.catas td a { color:white; text-decoration:none; }
+.catas td a:hover { color:gold; }
+
+
+.about { background:#111; padding:40px; text-align:center; }
+.about h2 { color:rgb(145, 0, 0); }
+.about ul { list-style:none; padding:0; }
+.about li { margin:10px 0; font-weight:bold; }
+
+
+.multimedia { padding:40px; text-align:center; }
+.multimedia h2 { color:rgb(114, 4, 0); }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+.grid img { width:100%; border:2px solid rgb(146, 0, 0); }
+
+
+footer { background:#111; padding:20px; text-align:center; border-top:2px solid rgb(194, 0, 0); }
+
+
+@media(max-width:768px){
+  nav a { display:block; margin:10px 0; border:none; }
+  .grid { grid-template-columns:1fr; }
+  .texto { font-size:24px; }
+}
+
